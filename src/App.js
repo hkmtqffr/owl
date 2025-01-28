@@ -48,25 +48,26 @@ function App() {
     setResult("");
 
     try {
-      const response = await axios.post("https://owlb-hkmts-projects.vercel.app/api/search", {
+      const response = await axios.post("http://localhost:5005/api/search", {
         code: trackingId,
       });
       
 
-      const events = response.data.result.toString().replaceAll("'", '"');
+      const events = response.data.result      
       if (events) {
         try {
-          const eventsArray = JSON.parse(events);
-          const dataForDestination = JSON.parse(events);
-          eventsArray.splice(0, 2);
 
           // Extract the country from the first array element
-          const firstRow = dataForDestination[0][0];
+          const firstRow = events[0][0];
+
           const destinationCountryExtracted = firstRow.split("Təyinat ölkəsi:")[1].trim();
           setDestinationCountry(destinationCountryExtracted);
 
+
+          events.splice(0,2); 
+
           // Replace values using the translationMap
-          const translatedResult = eventsArray.map((event) => {
+          const translatedResult = events.map((event) => {
             return event.map((item) => {
               if (item.startsWith("Çatdırılıb, alıcı:")) {
                 return item.replace("Çatdırılıb, alıcı:", "Delivered. Receiver:");
