@@ -48,7 +48,7 @@ function App() {
     setResult("");
 
     try {
-      const response = await axios.post("http://localhost:5005/api/search", {
+      const response = await axios.post("https://owlb-hkmts-projects.vercel.app/api/search", {
         code: trackingId,
       });
       
