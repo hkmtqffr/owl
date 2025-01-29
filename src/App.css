@@ -149,6 +149,7 @@ body {
   border-radius: 8px;
   outline: 1px solid #3F3E41;
   background: #1F1F21;
+  height: 34px;
 }
 
 .form:focus-within {
@@ -161,6 +162,7 @@ body {
 }
 
 .form input {
+  touch-action: manipulation;
   background: 0;
   border: none !important;
   width: 100%;
