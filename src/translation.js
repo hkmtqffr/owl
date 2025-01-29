@@ -27,7 +27,9 @@ const translationMap = {
     "Çatdırma cəhdi uğursuz olub, səbəb Ünvançı tapılmayıb Sonrakı tədbir/emal bu gün üçün nəzərdə tutulub":
     "Delivery attempt failed. Reason: Recipient not found. The next action/process is scheduled for today.",
     "Çatdırma cəhdi uğursuz olub, səbəb Ünvançının ərizəsinə əsasən Sonrakı tədbir/emal bu gün üçün nəzərdə tutulub":
-    "Delivery attempt failed. Reason: Based on the recipient's request. The next action/process is scheduled for today."
+    "Delivery attempt failed. Reason: Based on the recipient's request. The next action/process is scheduled for today.",
+    "Çatdırma cəhdi uğursuz olub, səbəb Ünvançı tapılmayıb Müştəri xəbərdar olunub":
+    "Delivery attempt unsuccessful Reason: Recipient not found. The customer has been notified."
   };
 
   export default translationMap;
