@@ -157,6 +157,14 @@ body {
   background-color: #1c1c1d;
 }
 
+.form-outline {
+  outline: 3px solid #3E2E7E;
+}
+
+.form-outline-0 {
+  outline: none;
+}
+
 .form:hover {
   background-color: #1c1c1d;
 }

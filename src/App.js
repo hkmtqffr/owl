@@ -98,7 +98,7 @@ function App() {
         <img className="logo" src={logo} alt="logo" />
       </div>
       <div className="content">
-        <form className="form" onSubmit={handleSearch}>
+        <form className={`form ${trackingId ? "form-outline" : "form-outline-0"}`} onSubmit={handleSearch}>
           <input
             type="text"
             value={trackingId}
@@ -126,8 +126,8 @@ function App() {
         {/* Chips Section */}
         <div className="chips-wrapper">
           {suggestions.map((suggestion, index) => (
-            <div className="chips" key={index}>
-              <span onClick={() => setTrackingId(suggestion)}>{suggestion}</span>
+            <div className="chips" key={index} onClick={() => setTrackingId(suggestion)}>
+              <span>{suggestion}</span>
               <button
                 className="chip-close"
                 onClick={() => removeSuggestion(suggestion)}
